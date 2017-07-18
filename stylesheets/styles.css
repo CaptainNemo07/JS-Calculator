@@ -1,0 +1,32 @@
+#body {
+  background-color: gray;
+}
+
+h2 {
+  margin: 9%;
+}
+
+.box {
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  text-align: center;
+  margin-left: 1%;
+}
+
+.yellow-box {
+  background-color: white;
+  padding: 10px;
+}
+
+#outsideBox {
+
+  margin-top: 10%;
+  margin-left: 33%;
+  margin-right: 41%;
+
+}
+
+#screen{
+  width: 300px;
+}
