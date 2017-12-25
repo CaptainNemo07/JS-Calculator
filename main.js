@@ -1,11 +1,11 @@
 // assertion test
 function assertEqual(actual, expected, testName) {
-   if (actual === expected) {
-     console.log('passed');
-   } else {
-     console.log('FAILED ' + testName + ': Expected ' + expected + ', but got ' + actual);
+  if ( actual === expected ) {
+    console.log('passed');
+  } else {
+    console.log('FAILED ' + testName + ': Expected ' + expected + ', but got ' + actual);
   }
- }
+}
 
 // start tells the program when to replace the number or when to append it
 var start = true;
@@ -42,115 +42,130 @@ var total = '';
 var content = '';
 // main function displaying on the screen
 function totalString(n) {
-if(total.length < 10) {
-  if (start == false) {
+  if ( total.length < 10 ) {
+    if ( start == false ) {
       total = String(n);
       console.log("total added");
       console.log(total);
       document.getElementById("screen").innerHTML = total;
       start = true;
       sign = true;
-  } else {
+    } else {
       total += n;
       console.log("total added");
       console.log(total);
       document.getElementById("screen").innerHTML = total;
       sign = true;
+    }
   }
 }
-}
+
 // button functions
 function one() {
   totalString(1);
 }
+
 function two() {
   totalString(2);
 }
+
 function three() {
   totalString(3);
 }
+
 function four() {
   totalString(4);
 }
+
 function five() {
   totalString(5);
 }
+
 function six() {
   totalString(6);
 }
+
 function seven() {
   totalString(7);
 }
+
 function eight() {
   totalString(8);
 }
+
 function nine() {
   totalString(9);
 }
+
 function zero() {
-  if (total !== '') {
+  if ( total !== '' ) {
     totalString(0);
   }
 }
+
 function point() {
-  if (points === true) {
+  if ( points === true ) {
     totalString('.');
     points = false;
     console.log(total);
   }
 }
-function equals() {
-  if (sign == true) {
-content = eval(total);
-total = String(content);
-  console.log(content);
-  start = false;
-  points = true;
-  document.getElementById("screen").innerHTML = content;
-}
 
+function equals() {
+  if ( sign == true ) {
+    content = eval(total);
+    total = String(content);
+    console.log(content);
+    start = false;
+    points = true;
+    document.getElementById("screen").innerHTML = content;
+  }
 }
 
 function addition() {
-  if (sign == true) {
-  console.log("addition");
-  total += ' + ';
-  start = true;
-  points = true;
-  sign = false;
-  document.getElementById("screen").innerHTML = total;
+  if ( sign == true ) {
+    console.log("addition");
+    total += ' + ';
+    start = true;
+    points = true;
+    sign = false;
+    document.getElementById("screen").innerHTML = total;
+  }
 }
-}
+
 function subtraction() {
-  if (sign == true) {
-  console.log("subtraction");
-  total += ' - ';
-  start = true;
-  points = true;
-  sign = false;
-  document.getElementById("screen").innerHTML = total;
+  if ( sign == true ) {
+    console.log("subtraction");
+    total += ' - ';
+    start = true;
+    points = true;
+    sign = false;
+    document.getElementById("screen").innerHTML = total;
+  }
 }
-}
+
 function multiplication() {
-  if (sign == true) {
-  console.log("multiplication");
-  total += ' * ';
-  start = true;
-  points = true;
-  sign = false;
-  document.getElementById("screen").innerHTML = total;
+  if ( sign == true ) {
+    console.log("multiplication");
+    total += ' * ';
+    start = true;
+    points = true;
+    sign = false;
+    document.getElementById("screen").innerHTML = total;
+  }
 }
-}
+
 function division() {
-  if (sign == true){
-  console.log("division");
-  total += ' / ';
-  start = true;
-  points = true;
-  sign = false;
-  document.getElementById("screen").innerHTML = total;
+  if ( sign == true ){
+    console.log("division");
+    total += ' / ';
+    start = true;
+    points = true;
+    sign = false;
+    document.getElementById("screen").innerHTML = total;
+  }
 }
-}
+
 function reset() {
   console.log("reset to 0");
   total = '';
